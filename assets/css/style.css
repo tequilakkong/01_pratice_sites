@@ -1,0 +1,161 @@
+/* device size - iphone12 mini w:360h:780 */
+@charset "UTF-8";
+
+body {
+    font-family: Arial, Helvetica, sans-serif;
+    font-size: 14px;
+}
+/*====================CSS========================*/
+.cover {
+    display: none;
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(0,0,0,0.8);
+    z-index: 10;
+}
+.contbody_scroll { /*화면에 스크롤이 생길 때 사용할 수 있음. 전체를 감싸주는 div 추가 후 해당 div에 적용*/
+    position: relative;
+    overflow: hidden;
+}
+/*====================Layout========================*/
+#wrap {
+    position: relative;
+}
+
+header {
+    height: 45px;
+    background: #33353F;
+}
+#conWrap {
+    display: flex;
+    height:600px;
+    flex-direction: column;
+}
+#con_up { display:flex; flex:2; }
+.s1-1 { flex:1;}
+.con_up_r { display:flex; flex-direction:column; flex:1 }
+    .s1-2 { flex:1;}
+    .s1-3 { flex:1;}
+
+#con_down { display:flex; flex:1; }
+.s2-1 { flex:1; }
+.s2-2 { flex:1;  }
+        
+footer {
+    position: relative;
+    background: #33353F;
+    padding: 16px 6px;
+
+    /* 상단 햄버거버튼 눌렀을 때 fixed 때문에 화면이 오른쪽으로 이동하지 않는 문제 발생
+    position: fixed;
+    bottom: 0;
+    left:0;
+    width: 100%;
+    background: #33353F;
+    padding: 16px 6px;
+    */
+}
+
+/*=====================Header==========================*/
+header {
+    width: 100%;
+    padding: 0 45px;
+    background: red;
+}
+    .lnb_btn {
+        position: relative;
+        left: -45px;
+        float: left;
+        z-index: 30;
+    }
+    .logo {
+        float: left;
+        background: #33353F;
+        width: 100%;
+        margin: 0 -45px;
+        text-align: center;
+    }
+    .search_btn {
+        position: relative;
+        float: right;
+        left: 45px;
+    }
+header img {
+    height: 45px;
+}
+
+/*=====================#conWrap==========================*/
+#conWrap section {
+    display: table;
+}
+
+#conWrap section > a {
+    display: table-cell;
+    vertical-align: middle;
+    text-align: center;
+    width: 100%;
+    height:100%; 
+}
+#conWrap section img {
+    /*transform-origin: 0 0;*/
+}
+
+#conWrap { padding:6px; }
+    #con_up { padding-bottom:3px; }
+        .s1-1 { padding-right:3px; }
+        .s1-1 a { background:#4abbbc }
+        .s1-1 a img {width: 120px;}
+        .con_up_r { padding-left:3px; }
+            .s1-2 { padding-bottom:3px; }
+            .s1-2 a { background:#589dd2 }
+            .s1-2 a img {width: 110px;}
+            .s1-3 { padding-top:3px; }
+            .s1-3 a { background:#ff912f }
+            .s1-3 a img {width:121px;}
+    
+    #con_down { padding-top:3px; }
+        .s2-1 { padding-right:3px; }
+        .s2-1 a { background:#589dd2 }
+        .s2-1 a img {width:124px;}
+        .s2-2 { padding-left:3px; }
+        .s2-2 a { background:#8dca35 }
+        .s2-2 a img {width:131px;}
+
+    
+
+/*===============================================*/
+
+.quickmenu {display: table; width: 100%; height: 33px;}
+.quickmenu li {display: table-cell; width: 33.3%; background: #535357;
+border-left: 1px solid #ccc; border-right: 1px solid #222;} /*라인 2개 사용해서 */
+.quickmenu li:first-child {border-left: 0;}
+.quickmenu li:last-child {border-right: 0;}
+
+.quickmenu li a {display: block; line-height: 33px; text-align: center; color: #fff; font-size: 12px;}
+
+.telsns {margin-top: 15px;}
+.telsns a {color: #fff; font-size: 22px;}
+.telsns a img {width: 24px; margin-left: 5px;} /*transform: scale(50%) - 이렇게 했더니 이미지가 흐려졌음.*/
+
+
+
+.pc {position: absolute; top: 65px; right: 6px; text-align: right;}
+.pc a {display: inline-block; padding: 4px 6px; background: #000; color: #fff; padding: 5px; margin-bottom: 5px; font-size: 12px;}
+
+
+.copyright {font-size: 12px; color: #fff; margin-top: 8px;}   
+
+/* #lnb 좌측 슬라이더 메뉴 */
+#lnb {z-index: 20; position: fixed; top: 0; left: -274px; width: 274px; height: 100%; background: #f1f1f1;}
+#lnb .lnb_login {background:#111; font-size: 14px; line-height: 1.5; padding: 35px 0 35px 17px;}
+#lnb .lnb_login span {color: #fff;}
+#lnb .lnb_login img {width: 232px; margin-top: 20px;}
+
+#lnb .lnb_list {border-bottom: 1px solid #ddd;}
+#lnb .lnb_list img {width: 274px;} /*274px*/
+
+#lnb .lnb_res {text-align: center; padding-top: 35px;}
+#lnb .lnb_res img {width: 232px;}
